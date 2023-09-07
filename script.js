@@ -5,7 +5,6 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -28,7 +27,8 @@ function generatePassword() {
     window.alert("Password must be larger than 8 and smaller than 128 characters");
     return("Try again!");
   }
-  //number
+  
+  //number character
   var userNumber = window.confirm("Click OK to confirm including numeric characters");
   if (userNumber){
     passwordChar = passwordChar.concat(passwordNumberChar);
