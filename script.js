@@ -51,6 +51,10 @@ function generatePassword() {
     passwordChar = passwordChar.concat(passwordLowerChar);
   }
 
+  //if no requirements were specified
+  if (!userNumber && !userSpecial && !userCapital && !userLower){
+    return("Please specify at least one requirement!")
+  }
   //generating password given prompts above
   for (var i = 0; i < userLength; i++) {
     var randomNumber = Math.floor(Math.random() * passwordChar.length);
